@@ -4,6 +4,21 @@ import marnley from '../assets/marnley.jpeg';
 import barge from '../assets/barge.jpeg';
 import kds1 from '../assets/kds1.jpeg';
 import kds2 from '../assets/kds2.jpeg';
+import m1 from '../assets/m1.jpeg';
+import m2 from '../assets/m2.jpeg';
+import m3 from '../assets/m3.jpeg';
+import m4 from '../assets/m4.jpeg';
+import m5 from '../assets/m5.jpeg';
+import m6 from '../assets/m6.jpeg';
+import m7 from '../assets/m7.jpeg';
+import m8 from '../assets/m8.jpeg';
+import m9 from '../assets/m9.jpeg';
+import m10 from '../assets/m10.jpeg';
+import m11 from '../assets/m11.jpeg';
+import m12 from '../assets/m12.jpeg';
+
+
+
 
 /**
  * Renewal Hope Academy — one-page partnership / fundraising site
@@ -31,27 +46,27 @@ const HERO_MAIN = 'https://images.unsplash.com/photo-1594608661623-aa0bd3a69799?
 const HERO_SIDE = 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=600&q=80';
 
 const GALLERY = [
-  { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80', alt: 'Teacher guiding students', rot: -4 },
-  { src: 'https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&w=600&q=80', alt: 'Children reading together', rot: 3 },
-  { src: 'https://images.unsplash.com/photo-1622467827417-bbe2237067ae?auto=format&fit=crop&w=600&q=80', alt: 'School community gathering', rot: -2 },
-  { src: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80', alt: 'Students during break time', rot: 5 },
-  { src: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80', alt: 'Young learner smiling', rot: -3 },
-  { src: 'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80', alt: 'Learning materials and books', rot: 2 },
+  { src: m7, alt: 'Teacher guiding students', rot: -4 },
+  { src:m4, alt: 'Children reading together', rot: 3 },
+  { src: m1, alt: 'School community gathering', rot: -2 },
+  { src: m8, alt: 'Students during break time', rot: 5 },
+  { src:m11, alt: 'Young learner smiling', rot: -3 },
+  { src: m2, alt: 'Learning materials and books', rot: 2 },
 ];
 
 const PROGRESS = [
-  { title: 'Growing student body', text: 'Children from Witu and the surrounding areas are joining our classrooms.', img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=80', wash: 'coral' },
-  { title: 'Dedicated teachers', text: 'Committed to academic excellence and discipleship, every single day.', img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=500&q=80', wash: 'marigold' },
-  { title: 'Safe, loving environment', text: 'A place where every child is known and valued for who they are.', img: 'https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&w=500&q=80', wash: 'teal' },
-  { title: 'Academics + Christian values', text: 'We teach the mind and nurture the heart, in equal measure.', img: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=500&q=80', wash: 'coral' },
+  { title: 'Growing student body', text: 'Children from Witu and the surrounding areas are joining our classrooms.', img: m4, wash: 'coral' },
+  { title: 'Dedicated teachers', text: 'Committed to academic excellence and discipleship, every single day.', img:m7, wash: 'marigold' },
+  { title: 'Safe, loving environment', text: 'A place where every child is known and valued for who they are.', img: m3, wash: 'teal' },
+  { title: 'Academics + Christian values', text: 'We teach the mind and nurture the heart, in equal measure.', img:m6, wash: 'coral' },
 ];
 
 const NEEDS = [
-  { tag: '01', title: 'Infrastructure', text: 'Classrooms, desks, learning materials, and play facilities.', img: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=500&q=80', wash: 'coral' },
-  { tag: '02', title: 'Teacher Welfare & Training', text: 'To retain and equip the staff who teach and disciple our children.', img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=500&q=80', wash: 'teal' },
-  { tag: '03', title: 'Feeding Program', text: 'So that no child learns on an empty stomach.', img: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=500&q=80', wash: 'marigold' },
-  { tag: '04', title: 'Scholarships', text: 'To support vulnerable children who cannot afford fees.', img: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=500&q=80', wash: 'navy' },
-  { tag: '05', title: 'Learning Resources', text: 'Textbooks, stationery, and digital tools for every classroom.', img: 'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=500&q=80', wash: 'coral' },
+  { tag: '01', title: 'Infrastructure', text: 'Classrooms, desks, learning materials, and play facilities.', img: m12, wash: 'coral' },
+  { tag: '02', title: 'Teacher Welfare & Training', text: 'To retain and equip the staff who teach and disciple our children.', img: m10, wash: 'teal' },
+  { tag: '03', title: 'Feeding Program', text: 'So that no child learns on an empty stomach.', img: m11, wash: 'marigold' },
+  { tag: '04', title: 'Scholarships', text: 'To support vulnerable children who cannot afford fees.', img: m5, wash: 'navy' },
+  { tag: '05', title: 'Learning Resources', text: 'Textbooks, stationery, and digital tools for every classroom.', img: m1, wash: 'coral' },
 ];
 
 const WAYS_TO_GIVE = [
@@ -179,10 +194,10 @@ export const HomePage=() =>{
 
           <div className="rha-hero-visual rha-reveal">
             <div className="rha-hero-blobmask">
-              <img src={kds1} alt="Students at Renewal Hope Academy" />
+              <img src={m8} alt="Students at Renewal Hope Academy" />
             </div>
             <div className="rha-hero-polaroid">
-              <img src={kds2} alt="Classroom life at RHA" />
+              <img src={barge} alt="Classroom life at RHA" />
             </div>
             <div className="rha-hero-stamp">
               <svg viewBox="0 0 100 100" className="rha-stamp-ring" aria-hidden="true">
@@ -323,7 +338,7 @@ export const HomePage=() =>{
           </div>
           <div className="rha-project-visual rha-reveal">
             <div className="rha-project-blobmask">
-              <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Classroom at Renewal Hope Academy" />
+              <img src={m12} alt="Classroom at Renewal Hope Academy" />
             </div>
           </div>
         </div>
@@ -336,10 +351,10 @@ export const HomePage=() =>{
         <div className="rha-container rha-ways-grid">
           <div className="rha-ways-visual rha-reveal">
             <div className="rha-hero-blobmask rha-ways-blobmask">
-              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=700&q=80" alt="Community supporting Renewal Hope Academy" />
+              <img src={m5} />
             </div>
             <div className="rha-hero-polaroid rha-ways-polaroid">
-              <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=500&q=80" alt="A child at Renewal Hope Academy" />
+              <img src={m11} />
             </div>
           </div>
           <div className="rha-ways-copy rha-reveal">
@@ -378,11 +393,11 @@ export const HomePage=() =>{
             <div className="rha-give-details">
               <div className="rha-give-field">
                 <small>M-Pesa Paybill</small>
-                <strong>[Add your Paybill number here]</strong>
+                <strong>247247</strong>
               </div>
               <div className="rha-give-field">
                 <small>Account Number</small>
-                <strong>[Add your account number here]</strong>
+                <strong>339030</strong>
               </div>
               <div className="rha-give-field">
                 <small>Bank Details</small>
@@ -424,7 +439,7 @@ export const HomePage=() =>{
             <div><strong>Pastor Robert Manley</strong>Director, Renewal Hope Academy</div>
             <div>Lead Pastor, Crossroads Fellowship, Witu</div>
             <div>Phone: [Add number here]</div>
-            <div>Email: [Add email here]</div>
+            <div>Email: renewalhopeacademy@gmail.com</div>
           </div>
           
         </div>
@@ -432,7 +447,7 @@ export const HomePage=() =>{
           <span>© 2026 Renewal Hope Academy, Witu.</span>
           <span className="rha-footer-tag">Together, let&apos;s raise a generation of hope.</span>
         </div>
-        <div style={{textAlign:'center',marginTop:30,fontSize:13,opacity:.7}}>Built with KWANG'A TECHNOLOGIES - TELL(+254798104979)</div>
+        <div style={{textAlign:'center',marginTop:30,marginRight:20,marginLeft:20 ,fontSize:13,opacity:.7}}>Built with KWANG'A TECHNOLOGIES - TELL(+254798104979)</div>
       </footer>
       
     </div>
