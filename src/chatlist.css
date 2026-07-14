@@ -1,0 +1,153 @@
+/* ChatListWeb.css */
+:root {
+  --bg: #F6FAFB;
+  --primary: #2B8FB5;
+  --text: #10242f;
+  --muted: #8FA4AF;
+  --card: #fff;
+  --shadow: 0 8px 20px rgba(16,24,40,0.06);
+  --badge: #FF5B5B;
+  --success: #16A34A;
+}
+
+.cl-root {
+  min-height: 100vh;
+  font-family: Inter, "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Fixed header area */
+.cl-header-fixed {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  box-shadow: var(--shadow);
+}
+
+.cl-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cl-back { cursor: pointer; color: var(--primary); font-weight: 600; }
+
+.cl-title { flex: 1; text-align: left; }
+.cl-title-main { font-size: 20px; font-weight: 700; }
+.cl-subtitle { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+/* actions (search + compose) */
+.cl-actions { display: flex; gap: 10px; align-items: center; }
+.cl-search {
+  height: 40px;
+  min-width: 300px;
+  border-radius: 10px;
+  border: 1px solid rgba(16,24,40,0.06);
+  padding: 8px 12px;
+  outline: none;
+  font-size: 14px;
+  color: var(--text);
+}
+.cl-search::placeholder { color: var(--muted); }
+.cl-comp {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* banner */
+.cl-banner-wrap { padding: 12px 24px; max-width: 1100px; margin: 0 auto; }
+.cl-banner {
+  display: flex;
+  gap: 12px;
+  background: linear-gradient(90deg,#E8FBFF,#F3FAFF);
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid rgba(43,143,181,0.08);
+  align-items: center;
+}
+.cl-secure-icon { width: 48px; height: 48px; display:flex; align-items:center; justify-content:center; background: #fff; border-radius:10px; box-shadow: var(--shadow); }
+.cl-banner-title { font-weight: 600; }
+.cl-banner-text { color: var(--muted); margin-top: 6px; line-height: 1.35; }
+.cl-banner-actions { margin-top: 8px; display:flex; gap:8px; }
+
+.cl-btn { border: none; padding: 8px 12px; border-radius: 10px; cursor:pointer; font-weight:600; }
+.cl-btn.primary { background: var(--primary); color: #fff; }
+.cl-btn.ghost { background: #fff; border: 1px solid rgba(16,24,40,0.04); color: var(--primary); }
+
+/* main */
+.cl-main-area { max-width: 1100px; margin: 18px auto; padding: 0 16px 60px; display:flex; flex-direction:column; min-height: calc(100vh - 160px); }
+.cl-content { flex: 1; }
+
+/* loading */
+.cl-loading { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:60px 0; color:var(--muted); }
+.spinner { width:36px; height:36px; border-radius:50%; border:4px solid rgba(0,0,0,0.06); border-top-color: var(--primary); animation: spin 1s linear infinite; margin-bottom:12px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* list & rows */
+.cl-list { display:flex; flex-direction:column; gap:12px; margin-top:8px; }
+.cl-row {
+  display:flex; align-items:flex-start; gap:12px;
+  background: var(--card); border-radius:12px; padding:12px;
+  box-shadow: var(--shadow);
+  cursor:pointer;
+}
+.cl-avatar-wrap { width:56px; height:56px; flex: 0 0 56px; border-radius:12px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#F3F9FB; }
+.cl-avatar { width:100%; height:100%; object-fit:cover; display:block; }
+.cl-avatar-placeholder { font-size:22px; }
+
+.cl-main { flex:1; min-width:0; }
+.cl-header { display:flex; justify-content:space-between; align-items:center; }
+.cl-name { font-weight:700; }
+.cl-time { color:var(--muted); font-size:12px; }
+
+.cl-sub { display:flex; justify-content:space-between; gap:12px; margin-top:6px; align-items:center; }
+.cl-last { color:#6b7280; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cl-tags { display:flex; gap:8px; margin-left:8px; }
+
+.cl-pill { padding:6px 8px; border-radius:12px; font-size:12px; background:#EEF8FF; color:var(--primary); font-weight:600; }
+.cl-pill.pending { background: #FFF7ED; color:#D97706; }
+.cl-pill.meta { background:#F3F9FB; color:var(--primary); }
+
+.cl-right { display:flex; flex-direction:column; align-items:flex-end; gap:8px; min-width:64px; }
+.cl-unread { background: var(--badge); color:#fff; padding:6px 8px; border-radius:16px; font-weight:700; font-size:12px; min-width:40px; text-align:center; }
+.cl-more { border:none; background:transparent; cursor:pointer; color:var(--muted); font-size:18px; }
+
+/* empty state */
+.cl-empty { text-align:center; padding:48px 12px; background: #fff; border-radius:12px; box-shadow: var(--shadow); }
+.cl-empty-icon { font-size:46px; margin-bottom:14px; }
+
+/* footer */
+.cl-footer { margin-top:18px; text-align:center; color:var(--muted); font-size:13px; }
+
+/* modal overlay */
+.cl-modal-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(2,6,23,0.5); z-index:2000; padding:24px; }
+.cl-modal-card { width:90%; max-width:760px; background:#fff; border-radius:12px; padding:16px; box-shadow:var(--shadow); }
+.cl-modal-img { width:100%; height:60vh; object-fit:contain; border-radius:8px; background:#f3f3f3; }
+.cl-modal-close { margin-top:8px; background:var(--primary); color:#fff; border:none; padding:8px 12px; border-radius:8px; }
+
+/* action card */
+.cl-action-card { width:90%; max-width:480px; background:#fff; border-radius:12px; padding:18px; }
+.cl-action-list { display:flex; flex-direction:column; gap:10px; margin-top:12px; }
+.cl-action-item { padding:10px 12px; border-radius:10px; border:1px solid rgba(16,24,40,0.04); background:transparent; cursor:pointer; text-align:left; }
+.cl-action-item.danger { border-color: rgba(244,67,54,0.12); color:#B71C1C; }
+
+/* help card */
+.cl-help-card { width:90%; max-width:720px; background:#fff; border-radius:12px; padding:20px; }
+
+.cl-toast { position:fixed; left:24px; right:24px; bottom:24px; padding:12px 16px; border-radius:12px; text-align:center; color:#fff; font-weight:700; z-index:2200; }
+.cl-toast.info { background:#0B78A3; }
+.cl-toast.success { background: #16A34A; }
+.cl-toast.error { background: #FF6B6B; }
+
+@media (min-width: 1200px) {
+  .cl-header-inner, .cl-banner-wrap, .cl-main-area { max-width: 1100px; margin: 0 auto; }
+}

@@ -1,0 +1,403 @@
+/* =========================
+   GLOBAL
+========================= */
+
+.sermon-page {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header span {
+  color: #c89b3c;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin: 15px 0;
+}
+
+.section-header p {
+  max-width: 700px;
+  margin: auto;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.sermon-hero {
+  background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1504052434569-70ad5836ab65");
+  background-size: cover;
+  background-position: center;
+  padding: 160px 0;
+  text-align: center;
+  color: white;
+}
+
+.sermon-hero span {
+  color: #c89b3c;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sermon-hero h1 {
+  font-size: 4rem;
+  margin: 20px 0;
+}
+
+.sermon-hero p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   SERMON META
+========================= */
+
+.sermon-meta-section {
+  background: white;
+}
+
+.sermon-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+}
+
+.meta-card {
+  background: #fff;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.meta-card h4 {
+  color: #c89b3c;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   FEATURED SCRIPTURE
+========================= */
+
+.featured-scripture {
+  background: linear-gradient(135deg,#111827,#1f2937);
+  color: white;
+  text-align: center;
+  padding: 70px;
+  border-radius: 30px;
+}
+
+.featured-scripture span {
+  color: #c89b3c;
+}
+
+.featured-scripture h2 {
+  font-size: 3rem;
+  margin: 15px 0;
+}
+
+.featured-scripture p {
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* =========================
+   SERMON CONTENT
+========================= */
+
+.sermon-content {
+  background: white;
+  padding: 60px;
+  border-radius: 30px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.05);
+}
+
+.sermon-content h2 {
+  margin: 40px 0 20px;
+  color: #111827;
+}
+
+.sermon-content p {
+  line-height: 2;
+  color: #475569;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+/* =========================
+   TAKEAWAYS
+========================= */
+
+.takeaways-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+}
+
+.takeaway-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(0,0,0,.05);
+}
+
+/* =========================
+   OUTLINE
+========================= */
+
+.outline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.outline-item {
+  display: flex;
+  gap: 25px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.05);
+}
+
+.outline-number {
+  min-width: 70px;
+  height: 70px;
+  background: #c89b3c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* =========================
+   REFLECTION
+========================= */
+
+.reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.reflection-card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.05);
+}
+
+/* =========================
+   PRAYER RESPONSE
+========================= */
+
+.prayer-response-card,
+.sermon-prayer-card,
+.salvation-card,
+.final-cta-card,
+.share-sermon-card,
+.find-place-card {
+  background: linear-gradient(135deg,#111827,#1f2937);
+  color: white;
+  text-align: center;
+  padding: 70px;
+  border-radius: 30px;
+}
+
+.prayer-response-card span,
+.sermon-prayer-card span,
+.salvation-card span,
+.final-cta-card span,
+.share-sermon-card span {
+  color: #c89b3c;
+}
+
+/* =========================
+   DOWNLOAD
+========================= */
+
+.download-card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+/* =========================
+   RELATED SERMONS
+========================= */
+
+.related-sermons-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.related-sermon-card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+  transition: .3s;
+}
+
+.related-sermon-card:hover {
+  transform: translateY(-8px);
+}
+
+.related-sermon-card span {
+  color: #c89b3c;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.related-sermon-card button {
+  margin-top: 15px;
+  border: none;
+  background: #c89b3c;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* =========================
+   SHARE BUTTONS
+========================= */
+
+.share-buttons,
+.salvation-buttons,
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.share-btn {
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,.3);
+  background: rgba(255,255,255,.1);
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.sermon-navigation {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+}
+
+.nav-card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+}
+
+.nav-card span {
+  color: #c89b3c;
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+  .sermon-hero h1{
+    font-size:3rem;
+  }
+
+  .sermon-meta-grid,
+  .takeaways-grid,
+  .reflection-grid,
+  .related-sermons-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .download-card{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+@media(max-width:768px){
+
+  section{
+    padding:80px 0;
+  }
+
+  .sermon-content{
+    padding:35px;
+  }
+
+  .sermon-meta-grid,
+  .takeaways-grid,
+  .reflection-grid,
+  .related-sermons-grid,
+  .sermon-navigation{
+    grid-template-columns:1fr;
+  }
+
+  .outline-item{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .featured-scripture,
+  .prayer-response-card,
+  .share-sermon-card,
+  .sermon-prayer-card,
+  .salvation-card,
+  .final-cta-card{
+    padding:40px 25px;
+  }
+
+  .sermon-hero h1{
+    font-size:2.3rem;
+  }
+}

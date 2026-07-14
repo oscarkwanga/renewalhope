@@ -1,0 +1,125 @@
+/* chat.css - apply / merge with your existing file */
+
+/* ensure root fills screen */
+html, body, #root { height: 100%; margin: 0; }
+
+/* root and main containers */
+.ca-root { display: flex; min-height: 100vh; width:100%; height: 100vh; font-family: Inter, "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial; }
+
+/* sidebar */
+.ca-sidebar { width: 320px; max-width: 34%; min-width: 260px; background: #fff; border-right: 1px solid #eef6fa; display:flex; flex-direction:column; box-shadow: 0 2px 8px rgba(16,24,40,0.03); }
+.ca-sidebar-header { padding: 18px; border-bottom: 1px solid #f1f6f8; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.ca-sidebar-controls input { padding:10px; border-radius:8px; border:1px solid #e6eef6; width: 100%; max-width: 220px; }
+.ca-btn { background:#2B8FB5; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
+
+/* chat list */
+.ca-chatlist { overflow:auto; padding: 10px; flex:1; -webkit-overflow-scrolling: touch; }
+.ca-chat-row { display:flex; align-items:center; gap:12px; padding:10px; border-radius:12px; cursor:pointer; transition:background .12s; }
+.ca-chat-row.active { background:#F1FDFF; box-shadow: 0 6px 12px rgba(16,24,40,0.04); }
+.ca-avatar img { width:48px; height:48px; border-radius:10px; object-fit:cover; }
+.ca-avatar-placeholder { width:48px; height:48px; border-radius:10px; background:#F3F8FA; display:flex; align-items:center; justify-content:center; }
+
+/* main content */
+.ca-main { flex:1; display:flex; flex-direction:column; background: #F6FAFB; min-width: 0; }
+
+/* topbar */
+.ca-topbar { padding:14px 18px; border-bottom:1px solid #eef6f8; display:flex; justify-content:space-between; align-items:center; background: linear-gradient(90deg,#0B78A3 0%, #66B3CC 100%); color:#fff; }
+.ca-top-left { display:flex; gap:12px; align-items:center; }
+.ca-chat-title { font-weight:700; font-size:16px; }
+.ca-top-actions .ca-btn.small { background: rgba(255,255,255,0.12); padding:8px 10px; color:#fff; border-radius:8px; border: none; }
+
+/* messages area: fill available vertical space; parent (.ca-root, .ca-main) must be full height */
+.ca-messages-wrapper { display:flex; flex-direction:column; flex:1; min-height:0; }
+.ca-messages { overflow:auto; padding: 18px; flex:1; min-height:0; -webkit-overflow-scrolling: touch; }
+
+/* group date */
+.ca-group-date { text-align:center; background:#f0f3f5; display:inline-block; padding:6px 12px; border-radius:16px; margin:8px auto; font-size:12px; color:#5b6670; }
+
+/* message layout: whole row is width:100% and wraps the internal flex container */
+.ca-msg-row { display:block; width:100%; margin-bottom:12px; }
+.ca-msg-bubble-wrap { display:flex; width:100%; align-items:flex-end; gap:10px; }
+
+/* Left / Right alignment */
+.ca-msg-row.them .ca-msg-bubble-wrap { justify-content:flex-start; }
+.ca-msg-row.me .ca-msg-bubble-wrap { justify-content:flex-end; }
+
+/* avatar */
+.ca-msg-avatar img { width:36px; height:36px; border-radius:10px; object-fit:cover; }
+.ca-avatar-placeholder { width:36px; height:36px; border-radius:10px; background:#F3F8FA; display:flex; align-items:center; justify-content:center; font-size:14px; }
+
+/* bubble sizes & wrapping:
+   - max-width ensures it won't span whole screen
+   - min-width prevents single short words from wrapping into two lines in wide layouts
+*/
+.ca-bubble {
+  display:inline-block;
+  box-sizing: border-box;
+  padding:12px 14px;
+  border-radius:14px;
+  box-shadow: 0 6px 12px rgba(16,24,40,0.04);
+  word-break: break-word;
+  white-space: pre-wrap;
+  line-height:1.4;
+  font-size:14px;
+  max-width: 68%;
+  min-width: 88px;
+  width: auto;
+}
+
+/* small screens reduce min-width */
+@media (max-width: 420px) {
+  .ca-bubble { min-width: 68px; max-width: 78%; }
+}
+
+/* SENT (me) */
+.ca-msg-row.me .ca-bubble { background: linear-gradient(90deg, #0B78A3 0%, #66B3CC 100%); color: #fff; border-bottom-right-radius:6px; }
+.ca-msg-row.me .ca-bubble-text { color:#fff; }
+
+/* RECEIVED (them) */
+.ca-msg-row.them .ca-bubble { background: #fff; color: #10242f; border-bottom-left-radius:6px; border: 1px solid #eef6f8; }
+.ca-msg-row.them .ca-bubble-text { color:#24303a; }
+
+/* optimistic and failed */
+.ca-bubble.optimistic { opacity: 0.92; }
+.ca-bubble.failed { border: 1px dashed #f44336; }
+
+/* bubble time and retry */
+.ca-bubble-time { font-size:12px; color:#8b98a1; margin-top:8px; display:flex; gap:8px; align-items:center; justify-content:flex-end; }
+.ca-retry { margin-left:8px; background:transparent; color:#d32f2f; border:0; cursor:pointer; font-weight:600; }
+
+/* input area pinned & always visible */
+.ca-input-area { display:flex; gap:12px; padding:12px 16px; border-top:1px solid #eef6f8; background:#fff; align-items:center; box-shadow: 0 -6px 20px rgba(16,24,40,0.03); }
+.ca-input-area textarea { flex:1; min-height:44px; max-height:160px; padding:12px; border-radius:12px; border:1px solid #eef6f8; resize:none; font-size:14px; line-height:1.4; }
+
+/* send button */
+.ca-send { background: linear-gradient(90deg,#0B78A3 0%, #66B3CC 100%); color:#fff; border:none; padding:10px 18px; border-radius:12px; cursor:pointer; box-shadow: 0 8px 18px rgba(43,143,181,0.12); font-weight:600; }
+.ca-send:disabled { opacity:0.55; cursor:not-allowed; }
+
+/* chat preview (single line with ellipsis) */
+.ca-meta { flex: 1; min-width: 0; } /* important for ellipsis to work */
+.ca-name { font-weight:700; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.ca-last { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #6b7280; font-size: 13px; max-width: 100%; }
+
+/* right column */
+.ca-right { display:flex; flex-direction:column; align-items:flex-end; margin-left: 8px; min-width: 72px; }
+
+/* time and unread */
+.ca-time { font-size:12px; color:#8fa4af; margin-bottom:6px; }
+.ca-unread { background:#FF5B5B; color:#fff; padding:6px 8px; border-radius:12px; font-size:12px; font-weight:700; min-width:34px; text-align:center; }
+
+/* starter buttons and empty states */
+.ca-empty-large { text-align:center; padding:40px 20px; color:#6b7280; }
+.ca-emoji { font-size:44px; margin-bottom:12px; }
+.ca-starters { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:12px; }
+.ca-starter { background:#fff; border:1px solid #E6EEF6; padding:8px 12px; border-radius:10px; cursor:pointer; }
+
+/* modal and toast */
+.ca-modal { position:fixed; left:0; top:0; right:0; bottom:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.5); z-index:1100; }
+.ca-modal-card { background:#fff; padding:20px; border-radius:12px; max-width:90%; box-shadow: 0 12px 40px rgba(8,12,20,0.35); }
+.ca-toast { position:fixed; left:50%; transform:translateX(-50%); bottom:28px; padding:10px 16px; border-radius:10px; color:#fff; z-index:1100; }
+
+/* responsive - hide sidebar on small screens */
+@media (max-width: 900px) {
+  .ca-sidebar { display:none; }
+  .ca-main { width:100%; }
+}

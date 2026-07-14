@@ -1,0 +1,119 @@
+/* src/styles/privacy.css
+   Clean, modern single-column privacy page.
+   Tweak colors/spacing to match your app theme if needed.
+*/
+
+:root{
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --accent: linear-gradient(90deg,#4f46e5,#06b6d4);
+  --glass: rgba(255,255,255,0.7);
+  --radius: 14px;
+  --maxw: 980px;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+
+.pp-shell{max-width:var(--maxw);margin:36px auto;padding:18px}
+
+.pp-hero{
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(79,70,229,0.12), rgba(6,182,212,0.04));
+  padding:22px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.06);
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.pp-hero-inner{display:flex;gap:18px;align-items:center;width:100%;justify-content:space-between}
+.pp-h1{margin:0;font-size:22px;letter-spacing:-0.2px}
+.pp-sub{margin:6px 0 0;color:var(--muted);font-size:13px}
+.pp-dot{display:inline-block;width:6px;height:6px;background:#e6e9ef;border-radius:50%;margin:0 8px;vertical-align:middle}
+
+/* hero actions */
+.pp-hero-actions{display:flex;gap:10px}
+.btn-primary{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  box-shadow: 0 6px 20px rgba(79,70,229,0.12);
+}
+.btn-primary:hover{opacity:0.95}
+.btn-ghost{
+  background:transparent;
+  border:1px solid rgba(15,23,42,0.06);
+  padding:10px 14px;border-radius:10px;cursor:pointer;color:var(--text);
+}
+
+/* toc (compact row) */
+.pp-toc{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:8px 0 16px;
+  align-items:center;
+  justify-content:flex-start;
+}
+.pp-toc a{
+  font-size:13px;color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;background:transparent;border:1px solid transparent;
+}
+.pp-toc a:hover{background:#fff;border-color:rgba(2,6,23,0.04);color:var(--text)}
+
+/* article (single column) */
+.pp-article{background:var(--card);padding:18px;border-radius:12px;box-shadow: 0 6px 18px rgba(2,6,23,0.03);}
+
+/* accordion section */
+.pp-section{margin-bottom:14px;border-radius:10px;overflow:hidden;border:1px solid rgba(15,23,42,0.03)}
+.pp-accordion{
+  width:100%;
+  text-align:left;
+  background:transparent;border:0;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;
+}
+.pp-title{font-weight:700;color:var(--text)}
+.pp-arrow{color:var(--muted);font-size:14px}
+.pp-body{padding:0 16px 18px;color:var(--muted);max-height:0;overflow:hidden;transition:max-height .28s ease, padding .28s ease}
+.pp-body.show{padding:12px 16px 18px;max-height:2000px}
+
+/* lists and paragraphs inside body */
+.pp-body p{margin:8px 0;line-height:1.6}
+.pp-body ul{margin:8px 0 8px 18px}
+.pp-body li{margin:6px 0}
+
+/* CTA row inside contact */
+.pp-cta-row{display:flex;gap:12px;align-items:center;margin-top:12px}
+.pp-small-link{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-size:13px}
+.pp-small-link:hover{text-decoration:underline}
+
+/* summary */
+.pp-summary{margin-top:18px;padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(6,182,212,0.04),rgba(79,70,229,0.02));color:var(--text);font-size:14px;border:1px solid rgba(15,23,42,0.03)}
+
+/* responsive */
+@media (max-width:880px){
+  .pp-shell{margin:18px 12px;padding:12px}
+  .pp-hero{padding:16px}
+  .pp-hero-inner{flex-direction:column;align-items:flex-start;gap:12px}
+  .pp-hero-actions{width:100%;justify-content:flex-start}
+  .pp-toc{gap:6px}
+}
+
+/* print styles - single column, clean */
+@media print{
+  body{background:#fff}
+  .pp-hero, .btn-primary, .btn-ghost, .pp-toc {display:none}
+  .pp-shell{max-width:100%;margin:0;padding:0}
+  .pp-article{box-shadow:none;border:none;padding:0}
+  .pp-accordion{cursor:default}
+  .pp-body{max-height:none;overflow:visible;padding:0 0 12px}
+}

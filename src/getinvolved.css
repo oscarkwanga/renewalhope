@@ -1,0 +1,434 @@
+/* ==========================================
+   GET INVOLVED PAGE
+   ========================================== */
+
+.get-involved-page{
+  overflow-x:hidden;
+}
+
+/* HERO */
+
+.involved-hero{
+  padding:8rem 0 6rem;
+  background:
+  linear-gradient(
+    135deg,
+    rgba(99,102,241,.08),
+    rgba(139,92,246,.08)
+  );
+  text-align:center;
+}
+
+.involved-hero-content{
+  max-width:850px;
+  margin:auto;
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:.7rem 1.3rem;
+  border-radius:50px;
+  background:rgba(99,102,241,.1);
+  color:var(--primary);
+  font-weight:700;
+  margin-bottom:1rem;
+}
+
+.involved-hero h1{
+  margin-bottom:1rem;
+}
+
+.involved-hero p{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:2rem;
+  font-size:1.1rem;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+/* SECTION SPACING */
+
+.why-section,
+.ways-section,
+.small-groups-section,
+.serve-section,
+.volunteer-section,
+.missions-section,
+.membership-section,
+.leadership-section,
+.opportunities-section,
+.success-stories-section,
+.impact-section,
+.find-place-section{
+  padding:6rem 0;
+}
+
+/* WHY SECTION */
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+}
+
+.why-card{
+  background:white;
+  padding:2rem;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:var(--shadow-md);
+  transition:.35s;
+}
+
+.why-card:hover{
+  transform:translateY(-10px);
+  box-shadow:var(--shadow-xl);
+}
+
+.why-icon{
+  font-size:2rem;
+  margin-bottom:1rem;
+}
+
+/* WAYS */
+
+.ways-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem;
+}
+
+.way-card{
+  background:white;
+  border-radius:20px;
+  padding:2rem;
+  box-shadow:var(--shadow-md);
+  transition:.3s;
+}
+
+.way-card:hover{
+  transform:translateY(-8px);
+}
+
+.way-card h3{
+  margin-bottom:.8rem;
+}
+
+.way-card p{
+  margin-bottom:1.5rem;
+}
+
+.way-card button{
+  width:100%;
+  border:none;
+  cursor:pointer;
+  padding:.9rem;
+  border-radius:12px;
+  color:white;
+  font-weight:700;
+  background:
+  linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+}
+
+
+/* SMALL GROUPS */
+
+.groups-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:3rem;
+  align-items:center;
+}
+
+.groups-content span,
+.leadership-content span{
+  color:var(--primary);
+  font-weight:700;
+  display:block;
+  margin-bottom:.7rem;
+}
+
+.groups-content h2,
+.leadership-content h2{
+  margin-bottom:1rem;
+}
+
+.groups-content p,
+.leadership-content p{
+  margin-bottom:1.5rem;
+}
+
+.groups-image img,
+.leadership-image img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:24px;
+  box-shadow:var(--shadow-xl);
+}
+
+/* SERVE SECTION */
+
+.serve-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem;
+}
+
+.serve-card{
+  background:white;
+  padding:2rem;
+  border-radius:20px;
+  box-shadow:var(--shadow-md);
+  transition:.3s;
+}
+
+.serve-card:hover{
+  transform:translateY(-8px);
+}
+
+.serve-card h3{
+  margin-bottom:1rem;
+  color:var(--primary);
+}
+
+/* VOLUNTEER */
+
+.volunteer-banner{
+  text-align:center;
+  padding:5rem 2rem;
+  border-radius:30px;
+  background:
+  linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color:white;
+}
+
+.volunteer-banner span{
+  font-weight:700;
+  opacity:.9;
+}
+
+.volunteer-banner h2{
+  color:white;
+  margin:1rem 0;
+}
+
+.volunteer-banner p{
+  color:rgba(255,255,255,.9);
+  max-width:700px;
+  margin:auto;
+  margin-bottom:2rem;
+}
+
+/* MISSIONS */
+
+.missions-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+}
+
+.mission-card{
+  background:white;
+  padding:2rem;
+  border-radius:20px;
+  box-shadow:var(--shadow-md);
+  transition:.3s;
+}
+
+.mission-card:hover{
+  transform:translateY(-8px);
+}
+
+.mission-card h3{
+  margin-bottom:1rem;
+  color:var(--primary);
+}
+
+/* MEMBERSHIP */
+
+.membership-steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:2rem;
+}
+
+.membership-step{
+  background:white;
+  text-align:center;
+  padding:2rem;
+  border-radius:20px;
+  box-shadow:var(--shadow-md);
+}
+
+.step-number{
+  width:70px;
+  height:70px;
+  margin:auto;
+  margin-bottom:1rem;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:800;
+  background:
+  linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+}
+
+/* LEADERSHIP */
+
+.leadership-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:3rem;
+  align-items:center;
+}
+
+/* OPPORTUNITIES */
+
+.opportunities-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+}
+
+.opportunity-card{
+  background:white;
+  border-radius:20px;
+  padding:2rem;
+  box-shadow:var(--shadow-md);
+  border-left:5px solid var(--primary);
+}
+
+.opportunity-card h3{
+  margin-bottom:.7rem;
+}
+
+/* STORIES */
+
+.stories-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:2rem;
+}
+
+.story-card{
+  background:white;
+  padding:2rem;
+  border-radius:20px;
+  box-shadow:var(--shadow-md);
+  flex-direction:column !important;
+}
+
+.story-card p{
+  font-style:italic;
+  margin-bottom:1rem;
+}
+
+.story-card h4{
+  color:var(--primary);
+}
+
+/* IMPACT */
+
+.impact-section{
+  background:
+  linear-gradient(
+    135deg,
+    var(--bg-dark),
+    var(--bg-darker)
+  );
+}
+
+.impact-section .section-header h2,
+.impact-section .section-header span{
+  color:white;
+}
+
+.impact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:2rem;
+}
+
+.impact-card{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:2rem;
+  text-align:center;
+}
+
+.impact-card h3{
+  color:white;
+  font-size:2.5rem;
+}
+
+.impact-card p{
+  color:rgba(255,255,255,.8);
+}
+
+/* FINAL CTA */
+
+.find-place-card{
+  text-align:center;
+  background:white;
+  padding:5rem 2rem;
+  border-radius:30px;
+  box-shadow:var(--shadow-xl);
+}
+
+.find-place-card span{
+  color:var(--primary);
+  font-weight:700;
+}
+
+.find-place-card h2{
+  margin:1rem 0;
+}
+
+.find-place-card p{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:2rem;
+}
+
+.find-place-buttons{
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+/* RESPONSIVE */
+
+@media(min-width:992px){
+
+  .groups-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .leadership-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}

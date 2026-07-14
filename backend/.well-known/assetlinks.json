@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sagodi.dwelify",
+      "sha256_cert_fingerprints": [
+        "6E:3A:B2:81:F6:04:83:67:77:4D:6B:22:94:3A:A7:6E:A1:BA:79:22:25:EF:82:6D:64:CC:9B:2A:94:78:2C:86"
+      ]
+    }
+  }
+]

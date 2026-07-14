@@ -1,0 +1,387 @@
+:root {
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+  --accent: #06b6d4;
+  --bg-light: #f0f9ff;
+  --white: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border: #e2e8f0;
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.12);
+  --radius: 16px;
+}
+
+/* =========================
+   GLOBAL PAGE WRAPPER
+========================= */
+.new-here-page {
+  background: var(--bg-light);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.new-here-hero {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, #eef2ff, #f0f9ff);
+}
+
+.new-here-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.new-here-badge {
+  display: inline-block;
+  background: rgba(99,102,241,0.1);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.new-here-hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.new-here-hero p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.new-here-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-quick-info {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.quick-info-card {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  flex: 1;
+  min-width: 180px;
+}
+
+.new-here-hero-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================
+   SECTION BASE
+========================= */
+section {
+  padding: 4rem 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header span {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   WELCOME MESSAGE
+========================= */
+.welcome-message-card {
+  max-width: 800px;
+  margin: auto;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.pastor-signature {
+  margin-top: 2rem;
+}
+
+/* =========================
+   EXPECT GRID
+========================= */
+.expect-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.expect-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.expect-card:hover {
+  transform: translateY(-5px);
+}
+
+.expect-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   ATMOSPHERE GRID
+========================= */
+.atmosphere-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.atmosphere-card {
+  background: linear-gradient(135deg, #fff, #f8fafc);
+  padding: 1.8rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   PASTORS
+========================= */
+.pastors-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.pastor-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.pastor-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.pastor-content {
+  padding: 1.5rem;
+}
+
+/* =========================
+   SERVICE GRID
+========================= */
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+/* =========================
+   LOCATION
+========================= */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.location-map img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================
+   CAMPUS TOUR
+========================= */
+.campus-tour-video {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.campus-tour-video img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.tour-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* =========================
+   BELIEFS
+========================= */
+.beliefs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.belief-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   NEXT STEPS
+========================= */
+.next-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.next-step-card {
+  background: linear-gradient(135deg, #fff, #eef2ff);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+/* =========================
+   FAQ
+========================= */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.faq-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   FORM
+========================= */
+.visitor-form-wrapper {
+  max-width: 900px;
+  margin: auto;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.visitor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+input, select, textarea {
+  padding: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* =========================
+   CTA
+========================= */
+.new-here-cta {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: var(--radius);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (min-width: 768px) {
+  .new-here-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .expect-grid,
+  .atmosphere-grid,
+  .beliefs-grid,
+  .next-steps-grid,
+  .faq-grid,
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pastors-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-row {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .expect-grid,
+  .beliefs-grid,
+  .next-steps-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
