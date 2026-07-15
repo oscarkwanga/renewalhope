@@ -30,7 +30,7 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'https://renewalhope-backend.onrender.com',
-    'https://admindwelify.onrender.com',
+    'https://renewalhope.onrender.com',
     'https://dwelify.xyz',
     'https://www.dwelify.xyz'
   ],
