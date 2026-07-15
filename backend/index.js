@@ -29,7 +29,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://alfahomes.onrender.com',
+    'https://renewalhope-backend.onrender.com',
     'https://admindwelify.onrender.com',
     'https://dwelify.xyz',
     'https://www.dwelify.xyz'

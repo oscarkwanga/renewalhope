@@ -480,7 +480,7 @@ const Donate = ({ amount }) => {
                   once you have a PayPal Business / Confirmed Charity account. */}
             <div className="rha-paypal-section">
 
-    <label style={{color:'#999',marginBottom:20}} >Donation Amount (USD)</label>
+    <label style={{color:'#999',paddingBottom:20, fontSize:12}} >Donation Amount (USD)</label>
 
     <input
     placeholder="enter the amount"
