@@ -5,14 +5,18 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cloudinary = require('cloudinary').v2;
-require('dotenv').config();
 const { initSocket } = require('./socket');
 
+require("dotenv").config();
 const sermons= require('./routes/sermonrouter');
 const ministries = require('./routes/ministryrouter');
 const events = require('./routes/eventrouter');
 const stories = require('./routes/storyrouter');
 const authentication = require('./routes/usersrouter');
+
+
+
+
 
 
 
@@ -83,7 +87,7 @@ app.use('/api/pastors', require('./routes/pastorrouter'));
 app.use('/api/cultures', require('./routes/culturerouter'));
 app.use('/api/constructions', require('./routes/constructionrouter'));
 app.use('/auth', authentication);
-
+app.use("/api/paypal", require("./routes/paypalrouter"));
 
 
 

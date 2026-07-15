@@ -17,6 +17,12 @@ import m10 from '../assets/m10.jpeg';
 import m11 from '../assets/m11.jpeg';
 import m12 from '../assets/m12.jpeg';
 
+  import axios from "axios";
+
+import {
+    PayPalButtons,
+    PayPalScriptProvider,
+} from "@paypal/react-paypal-js";
 
 
 
@@ -114,12 +120,22 @@ function Squiggle() {
   );
 }
 
+
+
+
+
 /* -------------------------------------------------------------------- */
+
+
+
+const API_BASE_URL = "https://renewalhope-backend.onrender.com";
+
 
 export const HomePage=() =>{
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const rootRef = useRef(null);
+  const [amount, setAmount] = useState("40");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -144,6 +160,62 @@ export const HomePage=() =>{
     nodes.forEach((node) => observer.observe(node));
     return () => observer.disconnect();
   }, []);
+
+
+
+
+
+
+
+const Donate = ({ amount }) => {
+
+   return (
+
+      <PayPalScriptProvider
+         options={{
+            clientId:"ATN0_iXTzYGpSr70pl_GNbRQl3VbTIdqh-GE1FqmW6zUx64756uvfJ7hoQhV9Dcci9lOEV1J5YHpL8zg"
+         }}
+      >
+
+         <PayPalButtons
+
+            style={{
+               color:"gold",
+               shape:"pill",
+               label:"donate",
+               layout:"vertical"
+            }}
+
+            createOrder={async()=>{
+
+               const {data}=await axios.post(
+                  `${API_BASE_URL}/api/paypal/create-order`,
+                  {
+                     amount
+                  }
+               );
+
+               return data.id;
+
+            }}
+
+            onApprove={async(data)=>{
+
+               await axios.post(
+                  `${API_BASE_URL}/api/paypal/capture-order/${data.orderID}`
+               );
+
+               alert("Thank you for supporting Renewal Hope Academy ❤️");
+
+            }}
+
+         />
+
+      </PayPalScriptProvider>
+
+   );
+
+}
 
   return (
     <div className="rha" ref={rootRef}>
@@ -399,29 +471,116 @@ export const HomePage=() =>{
                 <small>Account Number</small>
                 <strong>339030</strong>
               </div>
-              <div className="rha-give-field">
-                <small>Bank Details</small>
-                <strong>[Add your bank details here]</strong>
-              </div>
+         
+         
 
               {/* PayPal — classic hosted Donate form, works without a developer
                   account. Replace "business" with your PayPal email, or swap
                   for the hosted_button_id version from paypal.com/donate/buttons
                   once you have a PayPal Business / Confirmed Charity account. */}
-              <form action="https://www.paypal.com/donate" method="post" target="_blank" className="rha-paypal-form">
-                <input type="hidden" name="business" value="REPLACE-WITH-YOUR-PAYPAL-EMAIL@example.com" />
-                <input type="hidden" name="item_name" value="Renewal Hope Academy — Classroom & Feeding Project" />
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="hidden" name="no_recurring" value="0" />
-                <button type="submit" className="rha-give-field rha-give-field--paypal">
-                  <small>Give Online</small>
-                  <strong>Donate with PayPal →</strong>
-                </button>
-              </form>
+            <div className="rha-paypal-section">
+
+    <label style={{color:'#999',marginBottom:20}} >Donation Amount (USD)</label>
+
+    <input
+    placeholder="enter the amount"
+        type="number"
+        min="1"
+        value={amount}
+        onChange={(e)=>setAmount(e.target.value)}
+        className="rha-amount-input"
+    />
+
+    <Donate amount={amount}/>
+
+</div>
             </div>
           </div>
         </div>
       </section>
+
+
+
+
+      <section className="rha-sponsor-storyy">
+
+    <div className="rha-container">
+
+        <div className="rha-section-head rha-reveal">
+            <span className="rha-eyebrow">
+                Sponsor A Child
+            </span>
+
+            <h2>
+                One Child. One Opportunity. One Changed Future.
+            </h2>
+
+            <p>
+                Every month we are trusting God to provide sponsors for children
+                who would otherwise struggle to remain in school because of
+                hunger or school fees.
+            </p>
+        </div>
+
+        <div className="rha-sponsor-highlight rha-reveal">
+
+            <h3>
+                $40 per month changes everything.
+            </h3>
+
+            <p>
+                With just <strong>$40 each month</strong>, one child receives
+                full tuition together with daily meals — tea break, lunch,
+                and evening snacks. Your support removes both the burden
+                of school fees and the pain of learning on an empty stomach.
+            </p>
+
+        </div>
+
+        <div className="rha-support-grid rha-reveal">
+
+            <div className="rha-support-item">
+                <span>01</span>
+                <h4>Full Tuition</h4>
+                <p>Every school fee is fully covered.</p>
+            </div>
+
+            <div className="rha-support-item">
+                <span>02</span>
+                <h4>Tea Break</h4>
+                <p>A healthy morning refreshment.</p>
+            </div>
+
+            <div className="rha-support-item">
+                <span>03</span>
+                <h4>Lunch</h4>
+                <p>A nutritious meal that keeps children focused.</p>
+            </div>
+
+            <div className="rha-support-item">
+                <span>04</span>
+                <h4>Evening Snacks</h4>
+                <p>Extra nourishment before they return home.</p>
+            </div>
+
+        </div>
+
+        <div className="rha-sponsor-footer rha-reveal">
+
+            <p>
+                This month our prayer is to find sponsors for
+                <strong> 20 children.</strong> Together that means
+                <strong> $800 each month</strong> to provide education,
+                daily meals, hope, and a brighter future for an entire
+                classroom. Whether someone sponsors one child or many,
+                every act of generosity makes an eternal difference.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
       {/* ================= FOOTER ================= */}
       <footer className="rha-footer">
@@ -438,7 +597,7 @@ export const HomePage=() =>{
             <h4>Contact</h4>
             <div><strong>Pastor Robert Manley</strong>Director, Renewal Hope Academy</div>
             <div>Lead Pastor, Crossroads Fellowship, Witu</div>
-            <div>Phone: [Add number here]</div>
+            <div>Phone: 0720179551</div>
             <div>Email: renewalhopeacademy@gmail.com</div>
           </div>
           
@@ -718,6 +877,130 @@ const CSS = `
 .rha-give-field--paypal{cursor:pointer; background:linear-gradient(120deg, rgba(255,122,89,.3), rgba(255,182,72,.3)); transition:transform .2s ease, background .2s ease;}
 .rha-give-field--paypal:hover{transform:translateY(-2px); background:linear-gradient(120deg, rgba(255,122,89,.45), rgba(255,182,72,.45));}
 @media (max-width:860px){ .rha-give-panel{grid-template-columns:1fr;} .rha-give-details{border-left:none; border-top:1px solid rgba(255,255,255,.1);} }
+/*==============================
+ Sponsor Story
+===============================*/
+
+.rha-sponsor-story{
+    background:#fff;
+    padding:6rem 0;
+}
+
+.rha-sponsor-highlight{
+    max-width:760px;
+    margin:3rem auto;
+    text-align:center;
+    background:var(--rha-cream);
+    padding:3rem;
+    border-radius:24px;
+    position:relative;
+}
+
+.rha-sponsor-highlight::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:90px;
+    height:5px;
+    background:var(--rha-coral);
+    border-radius:20px;
+}
+
+.rha-sponsor-highlight h3{
+    font-size:2.3rem;
+    margin-bottom:1rem;
+    color:var(--rha-ink);
+}
+
+.rha-sponsor-highlight p{
+    max-width:620px;
+    margin:auto;
+    line-height:1.9;
+}
+
+.rha-support-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.5rem;
+    margin-top:4rem;
+}
+
+.rha-support-item{
+    text-align:center;
+}
+
+.rha-support-item span{
+    display:inline-flex;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:var(--rha-marigold);
+    color:var(--rha-ink);
+    justify-content:center;
+    align-items:center;
+    font-weight:700;
+    margin-bottom:1rem;
+}
+
+.rha-support-item h4{
+    margin-bottom:.5rem;
+}
+
+.rha-support-item p{
+    font-size:.95rem;
+}
+
+.rha-sponsor-footer{
+    margin-top:4rem;
+    text-align:center;
+    max-width:820px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.rha-sponsor-footer p{
+    font-size:1.05rem;
+    line-height:2;
+}
+
+@media(max-width:900px){
+
+.rha-support-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.rha-support-grid{
+    grid-template-columns:1fr;
+}
+
+.rha-sponsor-highlight{
+    padding:2rem;
+}
+
+.rha-sponsor-highlight h3{
+    font-size:1.8rem;
+}
+
+}
+
+.rha-paypal-section{
+    margin-top:20px;
+}
+
+.rha-amount-input{
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    border:none;
+    font-size:18px;
+    margin-bottom:20px;
+}
 
 /* ---------- footer ---------- */
 .rha-footer{background:var(--rha-ink-2); color:rgba(255,255,255,.78); padding:4.5rem 0 2rem;}
@@ -751,3 +1034,5 @@ if (typeof document !== 'undefined' && !document.getElementById('rha-fonts')) {
 
 
 export default HomePage;
+
+
