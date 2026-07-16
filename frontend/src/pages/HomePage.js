@@ -493,6 +493,34 @@ const Donate = ({ amount }) => {
 
     <Donate amount={amount}/>
 
+    <div className="rha-whatsapp-help">
+  <a
+    href="https://wa.me/254720179551?text=Hello%20Renewal%20Hope%20Academy,%20I%20would%20like%20to%20ask%20a%20question%20about%20supporting%20the%20school."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rha-whatsapp-btn"
+  >
+    <span className="rha-whatsapp-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        width="22"
+        height="22"
+        fill="currentColor"
+      >
+        <path d="M19.11 17.27c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.23-.65.08-.3-.15-1.27-.47-2.42-1.49-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.65-.93-2.26-.25-.6-.5-.53-.68-.54h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.13 4.54.72.31 1.29.5 1.73.64.73.23 1.39.2 1.91.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35z"/>
+        <path d="M16.03 3C8.84 3 3 8.77 3 15.9c0 2.52.74 4.97 2.14 7.07L3 29l6.2-2.03a13.07 13.07 0 006.83 1.88c7.19 0 13.03-5.77 13.03-12.9S23.22 3 16.03 3zm0 23.54c-2.12 0-4.2-.57-6.02-1.66l-.43-.25-3.68 1.2 1.2-3.58-.28-.45a10.54 10.54 0 01-1.63-5.63c0-5.9 4.84-10.69 10.84-10.69 5.97 0 10.84 4.8 10.84 10.69s-4.87 10.37-10.84 10.37z"/>
+      </svg>
+    </span>
+
+    <div className="rha-whatsapp-content">
+      <small>Chat with us on WhatsApp</small>
+    </div>
+
+    <span className="rha-whatsapp-arrow">→</span>
+  </a>
+</div>
+
 </div>
             </div>
           </div>
@@ -597,8 +625,17 @@ const Donate = ({ amount }) => {
             <h4>Contact</h4>
             <div><strong>Pastor Robert Manley</strong>Director, Renewal Hope Academy</div>
             <div>Lead Pastor, Crossroads Fellowship, Witu</div>
-            <div>Phone: 0720179551</div>
-            <div>Email: renewalhopeacademy@gmail.com</div>
+            <div>Phone: +254720179551, +254731995872</div>
+<div>
+  <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=renewalhopeacademy@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rha-email-link"
+>
+  Email : renewalhopeacademy@gmail.com
+</a>
+</div>
           </div>
           
         </div>
@@ -1001,6 +1038,85 @@ const CSS = `
     font-size:18px;
     margin-bottom:20px;
 }
+
+.rha-whatsapp-help{
+    margin-top:18px;
+}
+
+.rha-whatsapp-btn{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    width:100%;
+    padding:10px 18px;
+    background:linear-gradient(135deg,#25D366,#1ebe5d);
+    color:#fff;
+    border-radius:16px;
+    text-decoration:none;
+    transition:.3s ease;
+    box-shadow:0 12px 28px rgba(37,211,102,.28);
+}
+
+.rha-whatsapp-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 38px rgba(37,211,102,.4);
+}
+
+.rha-whatsapp-icon{
+    width:52px;
+    height:52px;
+    min-width:52px;
+    border-radius:50%;
+    background:rgba(255,255,255,.18);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.rha-whatsapp-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+}
+
+.rha-whatsapp-content strong{
+    color:#fff;
+    font-size:1rem;
+    font-weight:700;
+    margin-bottom:3px;
+}
+
+.rha-whatsapp-content small{
+    color:rgba(255,255,255,.9);
+    font-size:.82rem;
+}
+
+.rha-whatsapp-arrow{
+    font-size:1.4rem;
+    font-weight:700;
+    transition:.3s;
+}
+
+.rha-whatsapp-btn:hover .rha-whatsapp-arrow{
+    transform:translateX(5px);
+}
+
+@media(max-width:500px){
+
+.rha-whatsapp-btn{
+    padding:14px;
+}
+
+.rha-whatsapp-icon{
+    width:46px;
+    height:46px;
+    min-width:46px;
+}
+
+}
+
 
 /* ---------- footer ---------- */
 .rha-footer{background:var(--rha-ink-2); color:rgba(255,255,255,.78); padding:4.5rem 0 2rem;}
