@@ -628,9 +628,7 @@ const Donate = ({ amount }) => {
             <div>Phone: +254720179551, +254731995872</div>
 <div>
   <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=renewalhopeacademy@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
+  href="renewalhopeacademy@gmail.com"
   className="rha-email-link"
 >
   Email : renewalhopeacademy@gmail.com
