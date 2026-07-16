@@ -31,6 +31,7 @@ app.use(cors({
     'http://localhost:3000',
     'https://renewalhope-backend.onrender.com',
     'https://renewalhope.onrender.com',
+    'https://renewalhopeacademy.com/',
     'https://dwelify.xyz',
     'https://www.dwelify.xyz'
   ],
